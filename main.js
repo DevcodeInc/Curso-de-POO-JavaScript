@@ -3,12 +3,12 @@
   var App = window.App;
   var DataStore = App.DataStore;
   var Store = App.Store;
-  var Order = App.Order;
+  var PizzaOrder = App.PizzaOrder;
 
   console.log('Pizza place');
   var dataStore = new DataStore();
   var store = new Store('ncc-1701', dataStore);
-  var order = new Order('enrique@devcode.com', 'large', 'cheese');
+  var order = new PizzaOrder('enrique@devcode.com', 'large', 'cheese');
 
   store.createOrder(order);
   store.printOrders();
