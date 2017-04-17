@@ -2,12 +2,15 @@
   'use strict';
   var App = window.App;
   var DataStore = App.DataStore;
+  var Store = App.Store;
+  var Order = App.Order;
 
   console.log('Pizza place');
   var dataStore = new DataStore();
-  dataStore.add('valor1', 'esta es una cadena');
-  dataStore.add('valor2', 20);
-  console.log(dataStore);
-  console.log(dataStore.getAll());
-  console.log(dataStore.get('valor2'));
+  var store = new Store('ncc-1701', dataStore);
+  var order = new Order('enrique@devcode.com', 'large', 'cheese');
+
+  store.createOrder(order);
+  store.printOrders();
+
 }(window));
