@@ -3,8 +3,11 @@
   var App = window.App || {};
 
   function Store(storeId, db) {
+    // this = {};
+    // this.__proto__ = Store.prototype
     this.storeId = storeId;
     this.db = db; // composición
+    // return this;
   }
 
   Store.prototype.createOrder = function (order) {
