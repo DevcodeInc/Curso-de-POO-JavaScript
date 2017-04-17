@@ -11,6 +11,7 @@
   var order = new PizzaOrder('enrique@devcode.com', 'large', 'cheese');
 
   store.createOrder(order);
+  order.displayOrder();
   store.printOrders();
 
 }(window));

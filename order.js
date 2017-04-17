@@ -6,6 +6,10 @@
     this.email = email;
   }
 
+  BaseOrder.prototype.displayOrder = function () {
+    console.log('Order for: ' + this.email);
+  };
+
   function PizzaOrder (email, size, speciality) {
     BaseOrder.call(this, email);
     this.size = size;
@@ -14,6 +18,11 @@
 
   PizzaOrder.prototype = Object.create(BaseOrder.prototype);
   PizzaOrder.prototype.constructor = PizzaOrder;
+
+  PizzaOrder.prototype.displayOrder = function () {
+    BaseOrder.prototype.displayOrder.call(this);
+    console.log('Size: ' + this.size);
+  };
 
   App.PizzaOrder = PizzaOrder;
   window.App.App;
