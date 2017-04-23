@@ -36,5 +36,5 @@
   };
 
   App.Store = Store;
-  window.App.App;
+  window.App = App;
 }());
