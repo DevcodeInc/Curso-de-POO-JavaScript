@@ -1,0 +1,19 @@
+{
+  "name": "pizzaplace",
+  "version": "1.0.0",
+  "description": "JavaScript POO",
+  "main": "webpack.config.js",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "2"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack --progress --watch"
+  },
+  "author": "enrique7mc",
+  "license": "ISC"
+}
