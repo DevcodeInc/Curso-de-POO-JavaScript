@@ -1,25 +1,14 @@
-class BaseOrder {
-  constructor(email) {
-    this.email = email;
-  }
+const email = { email: '' };
+const size = { size: 'medium' };
+const speciality = { speciality: 'cheese' };
 
-  displayOrder() {
-    console.log(`Order for: ${this.email}`);
-  }
-}
+const BaseOrder = (params) => {
+  return Object.assign({}, email, params);
+};
 
-class PizzaOrder extends BaseOrder {
-  constructor(email, size, speciality) {
-    super(email);
-    this.size = size;
-    this.speciality = speciality;
-  }
-
-  displayOrder() {
-    super.displayOrder();
-    console.log(`Size: ${this.size}`);
-  }
-}
+const PizzaOrder = (params) => {
+  return Object.assign({}, email, size, speciality, params);
+};
 
 export {
   BaseOrder,
