@@ -10,6 +10,6 @@ const order = PizzaOrder({
 });
 store.createOrder(order);
 store.printOrders();
-// order.displayOrder();
+order.displayOrder();
 store.deliverOrder('enrique@devcode.com');
 store.printOrders();
