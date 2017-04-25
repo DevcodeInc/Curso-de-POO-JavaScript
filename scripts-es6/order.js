@@ -2,6 +2,10 @@ class BaseOrder {
   constructor(email) {
     this.email = email;
   }
+
+  displayOrder() {
+    console.log(`Order for: ${this.email}`);
+  }
 }
 
 class PizzaOrder extends BaseOrder {
@@ -9,6 +13,11 @@ class PizzaOrder extends BaseOrder {
     super(email);
     this.size = size;
     this.speciality = speciality;
+  }
+
+  displayOrder() {
+    super.displayOrder();
+    console.log(`Size: ${this.size}`);
   }
 }
 
