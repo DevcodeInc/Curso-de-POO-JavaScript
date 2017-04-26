@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Pizza Place</title>
+    <meta charset="utf-8"/>
+    <title>Pizza place</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="_build/bundle.js" defer></script>
   </head>
-  <body>
-    <h1>Pizza Place</h1>
+  <body class="container">
+    <header>
+      <h1>Pizza Place</h1>
+    </header>
+    <section>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form id="pizza-form" data-pizza-order="form">
+            <div class="form-group">
+              <label for="emailInput">Email</label>
+              <input class="form-control" type="email" name="email" id="emailInput" value="enrique@devcode.com" placeholder="enrique@devcode.com">
+            </div>
+            <div class="form-group">
+              <label for="size">Size</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="small">
+                  Small
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="medium" checked>
+                  Medium
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="large">
+                  Large
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="speciality">Speciality</label>
+              <select id="speciality" class="form-control" name="speciality">
+                <option value="cheese">Cheese</option>
+                <option value="hawaiian">Hawaiian</option>
+                <option value="meats">Meats</option>
+                <option value="veggie">Veggie</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Pending Orders:</h4>
+          <div id="checklist">
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
